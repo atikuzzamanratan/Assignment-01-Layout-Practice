@@ -1,18 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#c96161"
+                android:text="FLAT UI KIT"
+                android:textColor="#ffffff"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFA449"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+                    <TextView android:id="@+id/tvTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="09:30"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp"
+                        android:textAlignment="center"
+                        android:paddingTop="10dp"/>
+                    <TextView android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTime"
+                        android:text="JAN 10, 2014"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textAlignment="center" />
+                    <ImageView
+                        android:id="@+id/ivSun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvDate"
+                        android:foregroundGravity="center"
+                        android:paddingTop="5dp"
+                        android:src="@mipmap/sun"/>
+                    <TextView android:id="@+id/tvTempareture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivSun"
+                        android:text="25\u00B0"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp"
+                        android:textAlignment="center"
+                        android:paddingTop="5dp"/>
+                    <TextView android:id="@+id/tvCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTempareture"
+                        android:text="NEW YORK"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/vwEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        android:foregroundGravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="#97e1ec"
+                        android:src="@mipmap/email"/>
+                    <ImageView
+                        android:id="@+id/vwCloudUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#808080"
+                        android:padding="15dp"
+                        android:foregroundGravity="center"
+                        android:src="@mipmap/cloud_storage_upload"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_marginRight="10dp"
+                    android:text="WWW"
+                    android:paddingLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:textSize="25dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:drawableLeft="@mipmap/magnifier_tool"
+                    android:background="#f0888d"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="25dp"
+                    android:src="@mipmap/clock"
+                    android:background="#FFA449"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="NOW PLAYING"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_vertical"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:drawableLeft="@mipmap/music_player"
+                android:drawablePadding="15dp"
+                android:background="#97e1ec"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Assignment One</string>
+    <string name="old_price"><strike>  $499.99 </strike> </string>
 </resources>
